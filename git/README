@@ -1,0 +1,78 @@
+
+To check Git is installed : 
+# git --version
+# git version X.Y.Z
+
+
+Configure Git
+# git config --global user.name "your_username"
+# git config --global user.email "your_email_address@example.com"
+# git config --global --list
+
+
+Clone with SSH/HTTPS
+# git clone "git@gitlab.com:gitlab-tests/sample-project.git"     ##your host
+# git clone "GIT LAB REPOSITORY HTTP URL"
+# cd sample-project
+
+
+Clone using a token
+# git clone https://<username>:<token>@gitlab.example.com/tanuki/awesome_project.git
+
+Add a remote
+# git remote add origin git@gitlab.com:username/projectpath.git
+
+View your remote repositories
+# git remote -v
+
+
+Download the latest changes in the project
+# git pull <REMOTE> <name-of-branch>
+
+=======================================================================================================================
+Branches
+
+A branch is a copy of the files in the repository at the time you create the branch. You can work in your branch without affecting other branches. When you’re ready to add your changes to the main codebase, you can merge your branch into the default branch, for example, main.
+
+
+Use branches when you:
+
+-- Want to add code to a project but you’re not sure if it works properly.
+-- Are collaborating on the project with others, and don’t want your work to get mixed up.
+ 
+--> Create a branch
+# git checkout -b <name-of-branch>
+
+---> Switch to a branch
+# git checkout <name-of-branch>
+
+
+View differences
+# git diff
+
+Add and commit local changes
+# git add <file-name OR folder-name>
+# git status
+# git commit -m "COMMENT TO DESCRIBE THE INTENTION OF THE COMMIT"
+
+Stage and commit all changes
+# git commit -a -m "COMMENT TO DESCRIBE THE INTENTION OF THE COMMIT"
+
+Send changes to GitLab.com
+# git push <remote> <name-of-branch> 			
+e.g. # git push origin main
+
+Delete all changes in the branch
+# git checkout .
+
+
+Unstage all changes that have been added to the staging area
+# git reset
+
+
+Undo most recent commit
+# git reset HEAD~1
+
+Merge a branch with default branch
+# git checkout <default-branch>
+# git merge <feature-branch>
